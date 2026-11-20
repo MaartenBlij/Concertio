@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{titel}} · Concertio</title>
+  <link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header class="balk">
+    <a class="merk" href="/">🎸 Concertio</a>
+    <form class="zoek" method="get" action="/">
+      <input type="search" name="q" value="{{zoekwaarde}}" placeholder="Zoek op artiest, venue of plaats…">
+    </form>
+    <a class="knop" href="/concerten/nieuw">+ Nieuw concert</a>
+  </header>
+  <main class="inhoud">
+{{inhoud}}
+  </main>
+  <footer class="voettekst">Concertio draait lokaal in jouw eigen netwerk · alle gegevens staan in <code>data/</code></footer>
+</body>
+</html>
