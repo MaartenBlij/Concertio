@@ -1,0 +1,38 @@
+<h1>{{titel_pagina}}</h1>
+<form class="formulier" method="post" action="{{actie}}">
+  <label>Titel van het concert (festival, tournaam…)
+    <input type="text" name="titel" value="{{titel}}" placeholder="Optioneel">
+  </label>
+  <label>Datum *
+    <input type="date" name="datum" value="{{datum}}" required>
+  </label>
+  <div class="rij">
+    <label>Venue
+      <input type="text" name="venue" value="{{venue}}" placeholder="Bijv. Paradiso">
+    </label>
+    <label>Plaats
+      <input type="text" name="plaats" value="{{plaats}}" placeholder="Bijv. Amsterdam">
+    </label>
+  </div>
+  <label>Met wie was je er?
+    <input type="text" name="met_wie" value="{{met_wie}}" placeholder="Bijv. Sanne, Peter">
+  </label>
+  <div class="rij">
+    <label>Headliner
+      <input type="text" name="headliner" value="{{headliner}}" placeholder="Hoofdact">
+    </label>
+    <label>Beoordeling
+      <select name="beoordeling">{{beoordeling_opties}}</select>
+    </label>
+  </div>
+  <label>Overige artiesten (één per regel)
+    <textarea name="bands" rows="4" placeholder="Bijv.&#10;The Gathering&#10;Support: Eifel 65">{{bands}}</textarea>
+  </label>
+  <label>Notities
+    <textarea name="notities" rows="6" placeholder="Setlist, hoogtepunten, anekdotes…">{{notities}}</textarea>
+  </label>
+  <div class="acties">
+    <button class="knop" type="submit">Opslaan</button>
+    <a class="knop klein" href="{{terug}}">Annuleren</a>
+  </div>
+</form>

@@ -1,0 +1,14 @@
+services:
+  concertio:
+    build: .
+    container_name: concertio
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./data:/app/data
+    environment:
+      - PORT=8080
+      # Optioneel: Zet een login op de hele app (handig als de poort toch van buiten je netwerk bereikbaar is)
+      # - CONCERTIO_GEBRUIKER=jij
+      # - CONCERTIO_WACHTWOORD=jouw-geheime-wachtwoord
+    restart: unless-stopped

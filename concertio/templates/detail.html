@@ -1,0 +1,38 @@
+<article class="detail">
+  <header class="detail-kop">
+    <div class="datum-groot">{{datum_lang}}</div>
+    <h1>{{titel}}</h1>
+    <div class="sub">📍 {{venue}}</div>
+    <div class="meta-rij">
+      {{met_wie_badge}}
+      {{sterren}}
+    </div>
+    <div class="acties">
+      <a class="knop klein" href="/concerten/{{id}}/bewerken">Bewerken</a>
+      <form method="post" action="/concerten/{{id}}/verwijder" onsubmit="return confirm('Dit concert én alle foto\'s/video\'s verwijderen?');">
+        <button class="knop klein gevaarlijk" type="submit">Verwijderen</button>
+      </form>
+    </div>
+  </header>
+
+  <section class="blok">
+    <h2>Artiesten</h2>
+    <ul class="band-lijst">{{band_items}}</ul>
+  </section>
+
+  <section class="blok">
+    <h2>Notities</h2>
+    <p class="notities">{{notities}}</p>
+  </section>
+
+  <section class="blok" id="media">
+    <h2>Foto's &amp; video's</h2>
+    <form class="upload" method="post" action="/concerten/{{id}}/media" enctype="multipart/form-data">
+      <input type="file" name="bestanden" multiple accept="image/*,video/*" required>
+      <button class="knop" type="submit">Uploaden</button>
+    </form>
+    <div class="media-grid">
+{{media_items}}
+    </div>
+  </section>
+</article>
